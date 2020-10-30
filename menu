@@ -181,7 +181,7 @@ CreateThread(function()
                UseSounds = true,
                UseAutoWalk = false,
                UseAutoWalkAlt = false,
-               ShowKey = "DELETE
+               ShowKey = "DELETE",
                FreeCamKey = "HOME",
                RCCamKey = "=",
                DisableKey = "-",
@@ -196,7 +196,7 @@ CreateThread(function()
                SelectedCategory = "category_1",
                UsePrintMessages = false
            },
-           Name = "Sharkas010 Menu",
+           Name = "Hizzzu Menu",
            Version = "1.2.2c",
            Enabled = true,
            Showing = false,
@@ -2972,7 +2972,7 @@ CreateThread(function()
        function FM:Print(...)
            local str = (...)
            if not FM.Config.UsePrintMessages then return false end
-           print("[Sharkas010 Menu] " .. str)
+           print("[Hizzzu Menu] " .. str)
    
            return true
        end
@@ -7239,7 +7239,7 @@ end
                name = "Weapon List (" .. selected_weapon_opt .. "/" .. #options .. ")"
            end
    
-           FM.Painter:DrawText("~w~[~r~Sharkas010 Menu~w~] " .. (name or "?"), 4, false, FM:ScrW() - 360 - 21 - offX, 21, 0.35, 255, 255, 255, 255)
+           FM.Painter:DrawText("~w~[~r~Hizzzu Menu~w~] " .. (name or "?"), 4, false, FM:ScrW() - 360 - 21 - offX, 21, 0.35, 255, 255, 255, 255)
            local sY = 30
            local max_opts = 30
            local cur_opt = (asking_weapon and selected_weapon_opt or selected_spawner_opt)
@@ -8123,7 +8123,7 @@ end
    
        function FM.FreeCam:DrawMode()
            local name = self.ModeNames[self.Mode]
-           FM:ScreenText("~w~[~r~Sharkas010 Menu~w~] Freecam Mode: ~r~" .. name, 4, 1.0, 0.5, 0.97, 0.35, 255, 255, 255, 225)
+           FM:ScreenText("~w~[~r~Hizzzu Menu~w~] Freecam Mode: ~r~" .. name, 4, 1.0, 0.5, 0.97, 0.35, 255, 255, 255, 225)
        end
    
        local _on
@@ -8415,7 +8415,7 @@ end
            local n_x, n_y, n_w = self.Config.NotifX, self.Config.NotifY, self.Config.NotifW
    
            if not n_x or not n_y or not n_w then return end
-           self.Painter:DrawText("~w~[~r~Sharkas010 Menu~w~] Notifications", 4, false, n_x, n_y, 0.35, 255, 255, 255, dict.math.ceil(notif_alpha + 55))
+           self.Painter:DrawText("~w~[~r~Hizzzu Menu~w~] Notifications", 4, false, n_x, n_y, 0.35, 255, 255, 255, dict.math.ceil(notif_alpha + 55))
    
            if #self.Notifications <= 0 then
                self.Painter:DrawText("~w~No new notifications to display.", 4, false, n_x + 0.5, n_y + 33, 0.35, 255, 255, 255, dict.math.ceil(notif_alpha + 55))
@@ -8853,7 +8853,7 @@ end
    
        function FM:LoadDui()
            local runtime_txd = CreateRuntimeTxd("fm")
-           local banner_dui = CreateDui("https://cdn.discordapp.com/attachments/770354877431676949/771541026304163850/24.png", 300, 300)
+           local banner_dui = CreateDui("https://cdn.discordapp.com/attachments/770354877431676949/771559419406057522/images.png", 300, 300)
            local b_dui = GetDuiHandle(banner_dui)
            CreateRuntimeTextureFromDuiHandle(runtime_txd, "menu_bg", b_dui)
        end
@@ -8904,7 +8904,7 @@ end
            FM:AddNotification("INFO", "Use ~r~" .. FM.Config.ShowKey .. " ~w~to open the menu.", 25000)	   
            FM:RunACChecker()
            FM:RunDynamicTriggers()
-           FM:AddNotification("INFO", "Exec by Hizzzu | Sharkas010 Menu.", 15000)
+           FM:AddNotification("INFO", "Exec by Hizzzu | Hizzzu Menu.", 15000)
            FM:AddNotification("INFO", "[Dynamic Triggers] Replaced trigger esx_ambulancejob:revive", 15000)
            FM:AddNotification("INFO", "[Dynamic Triggers] Replaced trigger CarryPeople:sync", 15000)
            FM:AddNotification("INFO", "[Dynamic Triggers] Replaced trigger esx-qalle-jail:jailPlayer", 15000)
