@@ -181,7 +181,7 @@ CreateThread(function()
                UseSounds = true,
                UseAutoWalk = false,
                UseAutoWalkAlt = false,
-               ShowKey = "DELETE",
+               ShowKey = "MOUSE3",
                FreeCamKey = "HOME",
                RCCamKey = "=",
                DisableKey = "-",
